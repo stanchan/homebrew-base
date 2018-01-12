@@ -5,9 +5,9 @@ class Teleport < Formula
     sha256 "c5d2b313f7d811089db193ef9f89d0874e61590887175ff5411f8598eaa366fd"
   
     bottle do
-      sha256 "061ad19e1d5816cf5f7ff8be144e1c1243ab3c60fec4df563e878ab8ab159bd6" => :high_sierra
-      sha256 "3096bf78bb27f2e890cec3904ccc6b0fd5c8b954a6daad3cd6d891dfc7c6ea46" => :sierra
-      sha256 "d088bed577939fc7ce2054536c7ccd0d5928c25d20cf6cde02c13b7e0e9838f4" => :el_capitan
+      cellar :any_skip_relocation
+      root_url "https://bintray.com/stanchan/bottles"
+      sha256 "d2b5dbcb797712ddb80011a2826f12d3ec1907ac6d7e32ad89941897e00adcb1" => :high_sierra
     end
   
     depends_on "go" => :build

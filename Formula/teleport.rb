@@ -7,7 +7,7 @@ class Teleport < Formula
     bottle do
       cellar :any_skip_relocation
       root_url "https://dl.bintray.com/stanchan/bottles"
-      sha256 "d2b5dbcb797712ddb80011a2826f12d3ec1907ac6d7e32ad89941897e00adcb1" => :high_sierra
+      sha256 "8df54cc07c83f754325e7fa0684b6ac7b81c328cc7fcf4acb681661cf16f9803" => :high_sierra
     end
   
     depends_on "go" => :build

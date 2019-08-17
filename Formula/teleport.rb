@@ -1,28 +1,29 @@
 class Teleport < Formula
     desc "Modern SSH server for teams managing distributed infrastructure"
     homepage "https://gravitational.com/teleport"
-    url "https://github.com/stanchan/teleport/archive/v2.4.1.tar.gz"
-    sha256 "ccde4921daa6c4beb7113837de4809a03adefc47ac1dda66cbea9bd97e415e7f"
-  
+    url "https://github.com/stanchan/teleport/archive/v4.0.4.tar.gz"
+    sha256 "920df1ee46e569b19d326b34082aba60bfb324f63d55694e610b2fe3b62ed70f"
+    head "https://github.com/stanchan/teleport.git"
+
     bottle do
       cellar :any_skip_relocation
       root_url "https://dl.bintray.com/stanchan/bottles"
-      sha256 "bccda358823006b458180b9f01df93952c4e3e314dadc5821d8c0014eff22268" => :high_sierra
+      sha256 "882b6b4964e1559fba90c6a2e513ee07d178438c31a0c6a93d5b27817bf3ec96" => :mojave
     end
-  
+
     depends_on "go" => :build
-  
+
     conflicts_with "etsh", :because => "both install `tsh` binaries"
-  
+
     def install
       ENV["GOOS"] = "darwin"
-      ENV["GOARCH"] = MacOS.prefer_64_bit? ? "amd64" : "386"
+      ENV["GOARCH"] = "amd64"
       ENV["GOPATH"] = buildpath
       ENV["GOROOT"] = Formula["go"].opt_libexec
-  
+
       (buildpath / "src/github.com/gravitational/teleport").install buildpath.children
       ln_s buildpath/"src", buildpath / "src/github.com/gravitational/teleport"
-  
+
       cd "src/github.com/gravitational/teleport" do
         ENV.deparallelize { system "make", "release" }
         system "/usr/bin/tar", "-xvf", "teleport-v#{version}-#{ENV["GOOS"]}-#{ENV["GOARCH"]}-bin.tar.gz"
@@ -32,7 +33,7 @@ class Teleport < Formula
         end
       end
     end
-  
+
     test do
       assert_match version.to_s, shell_output("#{bin}/teleport version")
       assert_match version.to_s, shell_output("#{bin}/tctl version")

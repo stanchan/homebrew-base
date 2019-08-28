@@ -8,7 +8,7 @@ class Teleport < Formula
     bottle do
       cellar :any_skip_relocation
       root_url "https://dl.bintray.com/stanchan/bottles"
-      sha256 "7e897e60ca638ab6ca86f1e5a038dd3402c66010a16c7561d82164cbde56e0bb" => :mojave
+      sha256 "22be9ac66ac575e2ce05af362ccde81f04a16398dad0c372a17b3223a7aa45c8" => :mojave
     end
 
     depends_on "go" => :build

@@ -2,13 +2,13 @@ class Teleport < Formula
     desc "Modern SSH server for teams managing distributed infrastructure"
     homepage "https://gravitational.com/teleport"
     url "https://github.com/stanchan/teleport/archive/v4.1.2.tar.gz"
-    sha256 "caecdb3fdb8e0f2b491c7378685285944868e881c5bf66b09c2db810513d4b8f"
+    sha256 "5c5a75f45cea6db6d668d3d8a0f1d5d51dea52c9d07cf80075fc25cb72f3491c"
     head "https://github.com/stanchan/teleport.git"
 
     bottle do
       cellar :any_skip_relocation
       root_url "https://dl.bintray.com/stanchan/bottles"
-      sha256 "22be9ac66ac575e2ce05af362ccde81f04a16398dad0c372a17b3223a7aa45c8" => :mojave
+      sha256 "734c635c0eb82d244b2226e0a4b97ffd0fb416226614a39942712a0fbb8b45b0" => :mojave
     end
 
     depends_on "go" => :build

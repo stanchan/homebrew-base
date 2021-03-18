@@ -14,6 +14,8 @@ Run the following in your command-line:
 ```sh
 $ brew tap stanchan/base
 $ brew install stanchan/base/teleport
+$ brew install stanchan/base/sshpass
+$ brew install stanchan/base/mermaid-cli
 ```
 
 ## Bugs happen

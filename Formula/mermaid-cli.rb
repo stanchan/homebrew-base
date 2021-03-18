@@ -8,9 +8,9 @@ class MermaidCli < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, big_sur:  "503f1999378800866e6acea39608d2e7a80fc6d7956bed3ad5a9a2c3fb6f7f54"
-    sha256 cellar: :any, catalina: "05015617b49fe9d215798fc16cc504afe92605fdf84fd93d1aeda3aa8c5f4e9f"
-    sha256 cellar: :any, mojave:   "a1ef6b374cd599b41251985613ea840345630921499e86903cf1bd8f89048bfc"
+    cellar :any_skip_relocation
+    root_url "https://dl.bintray.com/stanchan/bottles"
+    sha256 cellar: :any, big_sur:  "b69b684d00fc5aa9c6161dac94ca850b2a8456ef6926792197fb38adc8d9304a"
   end
 
   depends_on "node"

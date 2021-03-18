@@ -10,7 +10,7 @@ class MermaidCli < Formula
   bottle do
     cellar :any_skip_relocation
     root_url "https://dl.bintray.com/stanchan/bottles"
-    sha256 cellar: :any, big_sur:  "b69b684d00fc5aa9c6161dac94ca850b2a8456ef6926792197fb38adc8d9304a"
+    sha256 cellar: :any, big_sur:  "46f76467da31836e79a04ab24a37226463964ee453f82ef8708b4d562fabc450"
   end
 
   depends_on "node"
